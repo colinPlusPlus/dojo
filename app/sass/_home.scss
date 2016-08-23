@@ -1,0 +1,207 @@
+.jumbo{
+  background: url('../img/header.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100%;
+
+  .light-nav{
+    background-color: rgba(255,255,255,0.95);
+    height: 13.75rem;
+    padding-top: 3.125rem;
+
+    em{
+      font-family: "Lato";
+      font-weight: $lead-font-weight;
+      font-size: 1.3125rem;
+      color: $brand-primary;
+      float: right;
+      text-align: right;
+      line-height: 1.3125rem;
+    }
+
+    p:first-child{
+      margin-top: 1rem;
+    }
+    p{
+      margin-bottom: 0rem;
+      font-weight: 900;
+      font-size: 1.5rem;
+      line-height: 1.25rem;
+      letter-spacing: -0.08125em;
+      font-family: "Roboto";
+    }
+
+  }
+
+  .dark-nav{
+    background-color: $menu-dark;
+    height: 13.75rem;
+    padding-top: 3.125rem;
+    padding-right: 1.875rem;
+
+    ul{
+      text-align: right;
+      font-size: 1.125rem;
+      font-weight: 700;
+      font-family: "Open Sans";
+      letter-spacing: 0.048125rem;
+      line-height: 1.4375rem;
+    }
+
+    a{
+      color: white;
+
+      &:hover{
+        color: $brand-primary;
+      }
+    }
+
+    a.active{
+      color: $brand-primary;
+    }
+  }
+
+  .carousel-caption{
+    text-align: left;
+    left: 0;
+    text-shadow: none;
+  }
+
+  .carousel-indicators{
+    text-align: left;
+    left: 30%;
+
+    li{
+      border-radius: 0px;
+      margin-right: $grid-gutter-width;
+      @include make-col(1);
+      background-color: $body-bg;
+      border: 0;
+    }
+
+    .active{
+      background-color: $brand-primary;
+    }
+  }
+}
+
+.cta{
+  height: 12rem;
+  background-color: $brand-primary;
+  text-align: center;
+  padding: 2.1875rem;
+
+  p{
+    line-height: 1.25rem;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  a{
+    background-color: white;
+    margin-top: 1.5rem;
+  }
+}
+
+.about-section{
+
+  .about-pic{
+    background: url("../img/about-pic.jpg") no-repeat top center;
+    background-size: cover;
+    height: 41.375rem;
+  }
+
+  .about-statement{
+    padding-top: 5.3125rem;
+
+    h2{
+      margin-bottom: 2.1875rem;
+    }
+
+    p{
+      line-height: 1.5625rem;
+    }
+  }
+}
+
+.section-break{
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.meme-quote{
+  @extend .row;
+  text-align: center;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  em{
+    font-weight: $lead-font-weight;
+    font-size: $font-size-h1;
+    color: lighten($body-color, 20%);
+    line-height: $line-height-base - .5;
+  }
+
+  p{
+    font-weight: 800;
+    margin-top: 2.5rem;
+  }
+}
+
+.benefits-section{
+
+  text-align: center;
+
+  h2,h3{
+    margin-bottom: 2.8125rem;
+  }
+  a.btn-outline-primary{
+    color: $brand-primary;
+    margin-top: 2.3125rem;
+    &:hover{
+      color: white;
+    }
+  }
+  p{
+    &:nth-child(even){
+      margin-bottom: 0;
+    }
+  }
+  .orange-bg{
+    background: linear-gradient(90deg, $body-bg 50%, $brand-primary 50%);
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  .featured-tiger{
+    color: white;
+    text-align: left;
+
+    h3{
+      text-align: center;
+    }
+
+    img{
+      margin-right: $grid-gutter-width;
+    }
+
+    a.btn-outline-secondary{
+      color: white;
+      border-color: white;
+      margin-top: 1rem;
+
+      &:hover{
+        color: $brand-primary;
+        background-color: white;
+      }
+    }
+  }
+}
+
+.tim{
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+
+  h2{
+    margin-bottom: 2.8125rem;
+  }
+}

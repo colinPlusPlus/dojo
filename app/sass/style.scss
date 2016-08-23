@@ -1,0 +1,59 @@
+//bootstrap variables
+//$enable-flex: true;
+$font-family-sans-serif: "Open Sans";
+$brand-primary: #FF893F;
+$body-bg: #F5F5F5;
+$body-color: #80838D;
+$headings-font-weight: 900;
+$headings-font-family: "Roboto";
+$footer-color: #3e454c;
+$footer-icon-color: #e06314;
+
+$menu-dark: rgba(62,69,76,0.95);
+
+@import 'bootstrap-custom';
+@import 'home';
+
+html,body{
+  height: 100%;
+}
+
+.bg-faded{
+  background-color: rgb(247,247,249);
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: $brand-primary;
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color: $body-color;
+}
+
+
+footer{
+  background-color: $footer-color;
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+  font-family: 'Lato';
+  text-align: center;
+
+  i{
+   // font-size: 6.25rem;
+    color: $footer-icon-color;
+  }
+
+  .lead{
+    font-weight: 400;
+  }
+
+  p{
+    text-align: left;
+    line-height: 1.3rem;
+    margin: 0;
+
+    &:nth-child(1){
+     margin-top: .5rem;
+    }
+  }
+}

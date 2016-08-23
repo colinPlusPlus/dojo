@@ -1,0 +1,21 @@
+{
+  "name": "dojo",
+  "version": "1.0.0",
+  "description": "Martial arts web site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Colin Williams",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.3",
+    "browser-sync": "^2.14.0",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.3.2"
+  }
+}
