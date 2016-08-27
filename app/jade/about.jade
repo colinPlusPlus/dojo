@@ -1,0 +1,104 @@
+include header.jade
+body
+  div.container-fluid
+    div.row
+      div.jumbo-about
+        div.container
+          div.row
+            div.col-md-2.light-nav
+              div.row
+                div.col-xs-12
+                  img(src="img/tiger_logo.png" class="img-fluid pull-xs-left" )
+                  em STREAK
+                  br
+                  em OF
+                  br
+                  em TIGERS
+              div.row
+                div.text-md-center
+                  p NAKA IMA
+                  p AIKIKAI AIKIDO
+            div.col-md-2.dark-nav
+              ul.nav
+                li.nav-item
+                  a(href="index.html" class="nav-link") HOME
+                li.nav-item
+                  a(href="about.html" class="nav-link active") ABOUT
+                li.nav-item
+                  a(href="#" class="nav-link") SCHEDULE
+                li.nav-item
+                  a(href="#" class="nav-link") PHOTO
+                li.nav-item
+                  a(href="#" class="nav-link") REGISTER
+                li.nav-item
+                  a(href="#" class="nav-link") CONTACT
+  nav(class="navbar navbar-light navbar-fixed-top bg-faded hidden-xs-up animated" id="element")
+    div.container
+      button(class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation") &#9776;
+      div(class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2")
+        a(class="navbar-brand" href="#")
+          img(src="img/tiger_logo.png" class="img-fluid pull-xs-left")
+          span Streak Of Tigers
+        ul(class="nav navbar-nav pull-md-right")
+          li(class="nav-item active")
+            a(class="nav-link" href="#") Home
+          li(class="nav-item")
+            a(class="nav-link" href="about.html") About
+          li(class="nav-item")
+            a(class="nav-link" href="#") Schedule
+          li(class="nav-item")
+            a(class="nav-link" href="#") Photo
+          li(class="nav-item")
+            a(class="nav-link" href="#") Register
+          li(class="nav-item")
+            a(class="nav-link" href="#") Contact
+  div.container
+    div.about-padding
+      div.row
+        div.col-md-2
+          h2.sectionTitle ABOUT
+      div.row
+        div.col-md-5
+          p Aikido is an exciting, dynamic and creative martial arts practice that liberates us as individuals. In this pursuit of excellence we come to realize the hidden potential within ourselves. By connecting through motion, we can recognize the interconnectedness of all things.
+          | With Aikido martial arts, children learn self-discipline and improve their concentration and self-respect. Aikido also builds awareness, self-confidence, teamwork, and a sense of social and community responsibility.
+        div.push-md-1.col-md-6
+          div(class="embed-responsive embed-responsive-16by9")
+            iframe(width="560" height="315" src="//www.youtube.com/embed/CHtVCl8poAI?rel=0" allowfullscreen)
+  hr.section-break
+  div.container
+    div.row.about-padding
+      div.col-md-2
+        h2.sectionTitle ABOUT
+      div.row
+        div.push-md-2.col-md-4
+          div.card
+            img(src="http://placehold.it/358x204" class="img-fluid card-img-top")
+            div.card-block
+              p.card-title Jesse Brown - 4th Dan
+              p.card-text Leader the Streak of Tigers. He is a life-long student of the martial arts. In addition to a 4th degree black belt in aikido, Jesse has a brown belt in judo
+        div.push-md-2.col-md-4
+          div.card
+            img(src="http://placehold.it/358x204" class="img-fluid card-img-top")
+            div.card-block
+              p.card-title Jesse Brown - 4th Dan
+              p.card-text Leader the Streak of Tigers. He is a life-long student of the martial arts. In addition to a 4th degree black belt in aikido, Jesse has a brown belt in judo
+include footer.jade
+script.
+    $(function(){
+      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+      $(window).scroll(function() {
+        var topHeight = $('.jumbo-about').height();
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= topHeight) {
+          $(".navbar").removeClass("hidden-xs-up");
+          $(".navbar").removeClass("fadeOutUp");
+          $(".navbar").addClass("fadeInDown")
+        }
+        if (scroll < topHeight) {
+          $(".navbar").addClass("fadeOutUp");
+          $(".navbar").removeClass("fadeInDown");
+        }
+      });
+    })

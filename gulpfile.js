@@ -11,7 +11,7 @@ gulp.task('clean', function(){
 });
 
 gulp.task('jade', function() {
-  return gulp.src('./app/jade/*.jade')
+  return gulp.src('./app/jade/**/*.jade')
   .pipe(jade())
   .pipe(gulp.dest('dist'));
 });
@@ -29,11 +29,12 @@ gulp.task('sass', function () {
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        server: {
-            baseDir: "dist"
-        },
+        // server: {
+        //     baseDir: "./dist?https://0.0.0.0:8080"
+        // },
         port: process.env.PORT,
-        host: process.env.IP
+        host: process.env.IP,
+        proxy: "http://ubuntu-colinplusplus.c9users.io/dojo/dist/index.html"
     });
 });
 

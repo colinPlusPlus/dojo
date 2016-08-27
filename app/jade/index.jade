@@ -1,187 +1,186 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
-    meta(http-equiv="x-ua-compatible" content="ie=edge")
-
-    link(rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lato:300,400|Open+Sans:300,400,700,800|Roboto:400,900")
-    link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css")
-    link(rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
-    link(rel="stylesheet" type="text/css" href="css/style.css")
-
-    title The Streak Of Tigers
-  body
-    div.jumbo
-      div.container
-        div.row
-          div.col-md-2.light-nav
-            div.row
-              div.col-xs-12
-                img(src="img/tiger_logo.png" class="img-fluid pull-xs-left" )
-                em STREAK
-                br
-                em OF
-                br
-                em TIGERS
-            div.row
-              div.text-md-center
-                p NAKA IMA
-                p AIKIKAI AIKIDO
-          div.col-md-2.dark-nav
-            ul.nav
-              li.nav-item
-                a(href="#" class="nav-link active") HOME
-              li.nav-item
-                a(href="#" class="nav-link") ABOUT
-              li.nav-item
-                a(href="#" class="nav-link") SCHEDULE
-              li.nav-item
-                a(href="#" class="nav-link") PHOTO
-              li.nav-item
-                a(href="#" class="nav-link") REGISTER
-              li.nav-item
-                a(href="#" class="nav-link") CONTACT
-        div.row
-          div.col-md-9
-            div(id="home-carousel" class="carousel slide" data-ride="carousel")
-              ol.carousel-indicators
-                li(data-target="#home-carousel" data-slide-to="0" class="active")
-                li(data-target="#home-carousel" data-slide-to="1")
-                li(data-target="#home-carousel" data-slide-to="2")
-              div(class="carousel-inner" role="listbox")
-                div.carousel-item.active
-                  div.viewport-height
-                  div.carousel-caption
-                    h1.text-uppercase.animated.fadeIn Effective Self Defense
-                    p.animated.slideInLeft Number 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim diam, aliquam non placerat vitae, dictum sit amet massa.
-                div.carousel-item
-                  div.viewport-height
-                  div.carousel-caption
-                    h1.text-uppercase.animated.fadeIn Mind & Body
-                    p.animated.slideInLeft Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim diam, aliquam non placerat vitae, dictum sit amet massa.
-    div.cta
-      p Not sure if Aikido is right for your child?
-      p Get two trial classes, no cost, no sign ups, no hassle. Just fun.
-      a(href="#" class="btn btn-outline-primary") LET'S TRY IT!
-    nav(class="navbar navbar-light navbar-fixed-top bg-faded hidden-xs-up animated" id="element")
-      div.container
-        button(class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation") &#9776;
-        div(class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2")
-          a(class="navbar-brand" href="#") StreakOfTigers
-          ul(class="nav navbar-nav pull-md-right")
-            li(class="nav-item active")
-              a(class="nav-link" href="#") Home
-            li(class="nav-item")
-              a(class="nav-link" href="#") About
-            li(class="nav-item")
-              a(class="nav-link" href="#") Schedule
-            li(class="nav-item")
-              a(class="nav-link" href="#") Photo
-            li(class="nav-item")
-              a(class="nav-link" href="#") Register
-            li(class="nav-item")
-              a(class="nav-link" href="#") Contact
-    div.about-section
-      div.container-fluid
-        div.row
-          div.col-md-6.about-pic
-          div.container
-            div.push-md-1.col-md-5.about-statement
-              h2 THE HISTORY OF AIKIDO
-              p Aikido is an exciting and dynamic martial arts for kids of all ages. It is a non-violent and non-aggressive martial art and a great way for children to have fun and stay healthy. We have Aikido martial art classes for kids on weekday evenings and Saturday mornings (click here for class schedule). Boys and girls ages 5 through 12 are welcome to join the children's Aikido classes.
-              p The kids martial arts classes typically start with stretching and warm-up exercises. Children learn how to roll and perform Aikido techniques, including self-defense moves. Games are also played to help children develop their balance and coordination. Belt tests are conducted on a regular basis.
-    hr.section-break
+include header.jade
+body
+  div.jumbo
     div.container
-      div.meme-quote
-        em We need to remember that the primary goal of Aikido is harmony and good relations between people.
-        p -Anno Sensei
-    hr.section-break
-    div.benefits-section
-      div.container-fluid
-        div.row.orange-bg
-          div.container
-            div.row
-              div.col-md-6
-                h2.text-uppercase benefits of martial arts
-                p With Aikido martial arts, children learn self-discipline and
-                p improve their concentration and self-respect
-                p Aikido also builds awarness, self-confidence, teamwork, and
-                p a sense of social and community responsibility.
-                a(class="btn btn-outline-primary") Learn More
-              div.col-md-5.push-md-1.featured-tiger
-                h3.text-uppercase OUR FEATURED TIGER
-                img(src="img/Naka Ima_010.jpg" class="img-fluid pull-xs-left")
-                p Donec nec bibendum neque. Vivamus imperdiet ac elit non commodo. Sed in pharetra justo. Aenean eros libero, maximus eget odio quis, pharetra elementum ex. Quisque nibh dui, condimentum tincidunt sagittis ac, hendrerit iaculis orci. Vestibulum gravida dapibus felis, eget
-                div.text-xs-center
-                  a(href="#" class="btn btn-outline-secondary") Read More
-    hr.section-break
-    div.tim
-      div.container
-        div.row
-          div.col-md-12
-            h2.text-uppercase Tigers in motion
-        div.row
-          div.col-md-3
+      div.row
+        div.col-md-2.light-nav
+          div.row
+            div.col-xs-12
+              img(src="img/tiger_logo.png" class="img-fluid pull-xs-left" )
+              em STREAK
+              br
+              em OF
+              br
+              em TIGERS
+          div.row
+            div.text-md-center
+              p NAKA IMA
+              p AIKIKAI AIKIDO
+        div.col-md-2.dark-nav
+          ul.nav
+            li.nav-item
+              a(href="index.html" class="nav-link active") HOME
+            li.nav-item
+              a(href="about.html" class="nav-link") ABOUT
+            li.nav-item
+              a(href="#" class="nav-link") SCHEDULE
+            li.nav-item
+              a(href="#" class="nav-link") PHOTO
+            li.nav-item
+              a(href="#" class="nav-link") REGISTER
+            li.nav-item
+              a(href="#" class="nav-link") CONTACT
+        div.col-md-9
+          div(id="home-carousel" class="carousel slide" data-ride="carousel")
+            ol.carousel-indicators
+              li(data-target="#home-carousel" data-slide-to="0" class="active")
+              li(data-target="#home-carousel" data-slide-to="1")
+              li(data-target="#home-carousel" data-slide-to="2")
+            div(class="carousel-inner" role="listbox")
+              div.carousel-item.active
+                div.viewport-height
+                div.carousel-caption
+                  h1.text-uppercase.animated.fadeInDownBig Effective Self Defense
+                  p Number 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim diam, aliquam non placerat vitae, dictum sit amet massa.
+              div.carousel-item
+                div.viewport-height
+                div.carousel-caption
+                  h1.text-uppercase.animated.fadeInDownBig Mind & Body
+                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim diam, aliquam non placerat vitae, dictum sit amet massa.
+  div.cta
+    p Not sure if Aikido is right for your child?
+    p Get two trial classes, no cost, no sign ups, no hassle. Just fun.
+    a(href="#" class="btn btn-outline-primary") LET'S TRY IT!
+  nav(class="navbar navbar-light navbar-fixed-top bg-faded hidden-xs-up animated" id="element")
+    div.container
+      button(class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation") &#9776;
+      div(class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2")
+        a(class="navbar-brand" href="#")
+          img(src="img/tiger_logo.png" class="img-fluid pull-xs-left")
+          span Streak Of Tigers
+        ul(class="nav navbar-nav pull-md-right")
+          li(class="nav-item active")
+            a(class="nav-link" href="#") Home
+          li(class="nav-item")
+            a(class="nav-link" href="about.html") About
+          li(class="nav-item")
+            a(class="nav-link" href="#") Schedule
+          li(class="nav-item")
+            a(class="nav-link" href="#") Photo
+          li(class="nav-item")
+            a(class="nav-link" href="#") Register
+          li(class="nav-item")
+            a(class="nav-link" href="#") Contact
+  div.about-section
+    div.container-fluid
+      div.row
+        div.col-md-6
+          div.row
+            img(src="img/Naka Ima_006.jpg" class="about-pic")
+        div.container
+          div.push-md-1.col-md-5.about-statement
+            h2 THE HISTORY OF AIKIDO
+            p Aikido is an exciting and dynamic martial arts for kids of all ages. It is a non-violent and non-aggressive martial art and a great way for children to have fun and stay healthy. We have Aikido martial art classes for kids on weekday evenings and Saturday mornings (click here for class schedule). Boys and girls ages 5 through 12 are welcome to join the children's Aikido classes.
+            p The kids martial arts classes typically start with stretching and warm-up exercises. Children learn how to roll and perform Aikido techniques, including self-defense moves. Games are also played to help children develop their balance and coordination. Belt tests are conducted on a regular basis.
+  hr.section-break
+  div.container
+    div.meme-quote
+      em The supreme challenge of the warrior is to turn an enemy's wrath into harmless laughter.
+      p -Ueshiba Morihei
+        em founder of Aikido
+  hr.section-break
+  div.benefits-section
+    div.container-fluid
+      div.row.orange-bg
+        div.container
+          div.row
+            div.col-md-6
+              h2.text-uppercase benefits of Aikido
+              p With Aikido martial arts, children learn self-discipline and
+              p improve their concentration and self-respect
+              p Aikido also builds awarness, self-confidence, teamwork, and
+              p a sense of social and community responsibility.
+              a(class="btn btn-outline-primary") Learn More
+            div.col-md-5.push-md-1.featured-tiger
+              h3.text-uppercase OUR FEATURED TIGER
+              img(src="img/Naka Ima_010.jpg" class="img-fluid pull-xs-left")
+              p Donec nec bibendum neque. Vivamus imperdiet ac elit non commodo. Sed in pharetra justo. Aenean eros libero, maximus eget odio quis, pharetra elementum ex. Quisque nibh dui, condimentum tincidunt sagittis ac, hendrerit iaculis orci. Vestibulum gravida dapibus felis, eget
+              div.text-xs-center
+                a(href="#" class="btn btn-outline-secondary") Read More
+  hr.section-break
+  div.tim
+    div.container
+      div.row
+        div.col-md-12
+          h2.text-uppercase Tigers in motion
+      div.row
+        div.col-md-3
+          a(href="http://placehold.it/262x224" data-gallery)
             img(src="http://placehold.it/262x224" class="img-fluid")
-          div.col-md-3
+        div.col-md-3
+          a(href="http://placehold.it/262x224" data-gallery)
             img(src="http://placehold.it/262x224" class="img-fluid")
-          div.col-md-6
+        div.col-md-6
+          a(href="http://placehold.it/262x224" data-gallery)
             img(src="http://placehold.it/549x224" class="img-fluid")
-        div(class="row" style="margin-top: 30px;")
-          div.col-md-3
+      div(class="row" style="margin-top: 30px;")
+        div.col-md-3
+          a(href="http://placehold.it/262x224" data-gallery)
             img(src="http://placehold.it/262x224" class="img-fluid")
-          div.col-md-3
+        div.col-md-3
+          a(href="http://placehold.it/262x224" data-gallery)
             img(src="http://placehold.it/262x224" class="img-fluid")
-          div.col-md-3
+        div.col-md-3
+          a(href="http://placehold.it/262x224" data-gallery)
             img(src="http://placehold.it/262x224" class="img-fluid")
-          div.col-md-3
+        div.col-md-3
+          a(href="http://placehold.it/262x224" data-gallery)
             img(src="http://placehold.it/262x224" class="img-fluid")
-    footer
-      div.container
-        div.row
-          div.col-md-1
-            i.fa.fa-map-marker.fa-5x
-          div.col-md-3
-            p.text-uppercase.lead naka ima aikikai aikido
-            p 123 Oakwood Ave
-            p Toronto, Ontario
-          div.col-md-1
-            i.fa.fa-mobile.fa-5x
-          div.col-md-3
-            p @StreakOfTIgers
-            p.text-uppercase phone: 416-555-1234
-            p.text-uppercase email: mail@me.com
-          div.col-md-1
-          div.col-md-1
-            i.fa.fa-youtube-square.fa-4x
-          div.col-md-1
-            i.fa.fa-facebook-square.fa-4x
-          div.col-md-1
-            i.fa.fa-instagram.fa-4x
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous")
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous")
-    script.
-      $(function(){
-        var a = $(window).height()/2 - $('.carousel-caption').height()/2;
-        a = a + "px";
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  // The Bootstrap Image Gallery lightbox, should be a child element of the document body
+  div#blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
+    // The container for the modal slides
+    div.slides
+    // Controls for the borderless lightbox
+    h3.title
+    a.prev ‹
+    a.next ›
+    a.close ×
+    a.play-pause
+    ol.indicator
+    // The modal dialog, which will be used to wrap the lightbox content
+    div.modal.fade
+      div.modal-dialog
+        div.modal-content
+          div.modal-header
+            h4.modal-title
+          div.modal-body.next
+          div.modal-footer
+            button.btn.btn-default.pull-left.prev(type='button')
+              i.glyphicon.glyphicon-chevron-left Previous
+            button.btn.btn-primary.next(type='button') Next
+              i.glyphicon.glyphicon-chevron-right
+  include footer.jade
+  script.
+    $(function(){
+      var a = $(window).height()/2 - $('.carousel-caption').height()/2;
+      a = a + 100;
+      a = a + "px";
+      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
-        $('.viewport-height').css('height', a);
+      $('.viewport-height').css('height', a);
 
-        $(window).scroll(function() {
-          var topHeight = $(window).height();
-          var scroll = $(window).scrollTop();
+      $(window).scroll(function() {
+        var topHeight = $(window).height();
+        var scroll = $(window).scrollTop();
 
-          if (scroll >= topHeight) {
-            $(".navbar").removeClass("hidden-xs-up");
-            $(".navbar").removeClass("fadeOutUp");
-            $(".navbar").addClass("fadeInDown")
-          }
-          if (scroll < topHeight) {
-            $(".navbar").addClass("fadeOutUp");
-            $(".navbar").removeClass("fadeInDown");
-          }
-        });
-      })
+        if (scroll >= topHeight) {
+          $(".navbar").removeClass("hidden-xs-up");
+          $(".navbar").removeClass("fadeOutUp");
+          $(".navbar").addClass("fadeInDown")
+        }
+        if (scroll < topHeight) {
+          $(".navbar").addClass("fadeOutUp");
+          $(".navbar").removeClass("fadeInDown");
+        }
+      });
+    })

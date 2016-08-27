@@ -4,64 +4,7 @@
   width: 100%;
   min-height: 100%;
 
-  .light-nav{
-    background-color: rgba(255,255,255,0.95);
-    height: 13.75rem;
-    padding-top: 3.125rem;
-
-    em{
-      font-family: "Lato";
-      font-weight: $lead-font-weight;
-      font-size: 1.3125rem;
-      color: $brand-primary;
-      float: right;
-      text-align: right;
-      line-height: 1.3125rem;
-    }
-
-    p:first-child{
-      margin-top: 1rem;
-    }
-    p{
-      margin-bottom: 0rem;
-      font-weight: 900;
-      font-size: 1.5rem;
-      line-height: 1.25rem;
-      letter-spacing: -0.08125em;
-      font-family: "Roboto";
-    }
-
-  }
-
-  .dark-nav{
-    background-color: $menu-dark;
-    height: 13.75rem;
-    padding-top: 3.125rem;
-    padding-right: 1.875rem;
-
-    ul{
-      text-align: right;
-      font-size: 1.125rem;
-      font-weight: 700;
-      font-family: "Open Sans";
-      letter-spacing: 0.048125rem;
-      line-height: 1.4375rem;
-    }
-
-    a{
-      color: white;
-
-      &:hover{
-        color: $brand-primary;
-      }
-    }
-
-    a.active{
-      color: $brand-primary;
-    }
-  }
-
-  .carousel-caption{
+   .carousel-caption{
     text-align: left;
     left: 0;
     text-shadow: none;
@@ -82,6 +25,63 @@
     .active{
       background-color: $brand-primary;
     }
+  }
+}
+
+.light-nav{
+  background-color: rgba(255,255,255,0.98);
+  height: 13.75rem;
+  padding-top: 3.125rem;
+
+  em{
+    font-family: "Lato";
+    font-weight: $lead-font-weight;
+    font-size: 1.3125rem;
+    color: $brand-primary;
+    float: right;
+    text-align: right;
+    line-height: 1.3125rem;
+  }
+
+  p:first-child{
+    margin-top: 1rem;
+  }
+  p{
+    margin-bottom: 0rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.08125em;
+    font-family: "Roboto";
+  }
+
+}
+
+.dark-nav{
+  background-color: $menu-dark;
+  height: 13.75rem;
+  padding-top: 3.125rem;
+  padding-right: 1.875rem;
+
+  ul{
+    text-align: right;
+    font-size: 1.125rem;
+    font-weight: 700;
+    font-family: "Open Sans";
+    letter-spacing: 0.048125rem;
+    line-height: 1.4375rem;
+  }
+
+  a{
+    color: white;
+
+    &:hover{
+      color: $brand-primary;
+    }
+  }
+
+  a.active{
+    color: $brand-primary;
   }
 }
 
@@ -106,9 +106,10 @@
 .about-section{
 
   .about-pic{
-    background: url("../img/about-pic.jpg") no-repeat top center;
-    background-size: cover;
-    height: 41.375rem;
+    width: 100%;
+    // background: url("../img/Naka Ima_006.jpg") no-repeat center center;
+    // background-size: cover;
+    max-height: 41.0625rem;
   }
 
   .about-statement{
@@ -144,6 +145,11 @@
   p{
     font-weight: 800;
     margin-top: 2.5rem;
+
+    em{
+      font-weight: 400;
+      font-size: $font-size-base;
+    }
   }
 }
 

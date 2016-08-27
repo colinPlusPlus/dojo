@@ -9,7 +9,7 @@ $headings-font-family: "Roboto";
 $footer-color: #3e454c;
 $footer-icon-color: #e06314;
 
-$menu-dark: rgba(62,69,76,0.95);
+$menu-dark: rgba(62,69,76,0.98);
 
 @import 'bootstrap-custom';
 @import 'home';
@@ -19,17 +19,46 @@ html,body{
 }
 
 .bg-faded{
-  background-color: rgb(247,247,249);
+  background-color: rgba(247,247,249, 0.98);
 }
 
+/* Navigation & Navbar */
+
+.navbar{
+  padding: 0;
+}
+
+.navbar-brand{
+  span{
+    display: inline-block;
+    margin-top: 20.5px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    color: $body-color;
+
+    &:hover{
+      color: $brand-primary;
+    }
+  }
+}
 .navbar-light .navbar-nav .active > .nav-link {
   color: $brand-primary;
 }
 
 .navbar-light .navbar-nav .nav-link{
   color: $body-color;
+  text-transform: uppercase;
+
+  &:hover{
+    color: rgba( $brand-primary, .9);
+  }
 }
 
+ul.nav.navbar-nav.pull-md-right{
+  margin-top: 20.5px;
+}
+
+/* Footer */
 
 footer{
   background-color: $footer-color;
@@ -56,4 +85,21 @@ footer{
      margin-top: .5rem;
     }
   }
+}
+
+.jumbo-about{
+  background: url("../img/Naka Ima_007a.jpg") no-repeat center center;
+  background-size: cover;
+  //height: 32.8125rem;
+}
+
+.about-padding{
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
+
+  .sectionTitle{
+    border-bottom: thin solid $body-color;
+    margin-bottom: 3.25rem;
+  }
+
 }
