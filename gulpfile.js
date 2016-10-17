@@ -29,12 +29,12 @@ gulp.task('sass', function () {
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        // server: {
-        //     baseDir: "./dist?https://0.0.0.0:8080"
-        // },
+        server: {
+            baseDir: "./dist/"
+        },
         port: process.env.PORT,
         host: process.env.IP,
-        proxy: "http://ubuntu-colinplusplus.c9users.io/dojo/dist/index.html"
+        //proxy: "http://ubuntu-colinplusplus.c9users.io/dojo/dist/index.html"
     });
 });
 

@@ -1228,6 +1228,151 @@ dl.row > dd + dt, dl.meme-quote > dd + dt {
   .offset-xl-11 {
     margin-left: 91.66667%; } }
 
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem; }
+  .table th,
+  .table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #eceeef; }
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #eceeef; }
+  .table tbody + tbody {
+    border-top: 2px solid #eceeef; }
+  .table .table {
+    background-color: #F5F5F5; }
+
+.table-sm th,
+.table-sm td {
+  padding: 0.3rem; }
+
+.table-bordered {
+  border: 1px solid #eceeef; }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #eceeef; }
+  .table-bordered thead th,
+  .table-bordered thead td {
+    border-bottom-width: 2px; }
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075); }
+
+.table-active,
+.table-active > th,
+.table-active > td {
+  background-color: rgba(0, 0, 0, 0.075); }
+
+.table-hover .table-active:hover {
+  background-color: rgba(0, 0, 0, 0.075); }
+  .table-hover .table-active:hover > td,
+  .table-hover .table-active:hover > th {
+    background-color: rgba(0, 0, 0, 0.075); }
+
+.table-success,
+.table-success > th,
+.table-success > td {
+  background-color: #dff0d8; }
+
+.table-hover .table-success:hover {
+  background-color: #d0e9c6; }
+  .table-hover .table-success:hover > td,
+  .table-hover .table-success:hover > th {
+    background-color: #d0e9c6; }
+
+.table-info,
+.table-info > th,
+.table-info > td {
+  background-color: #d9edf7; }
+
+.table-hover .table-info:hover {
+  background-color: #c4e3f3; }
+  .table-hover .table-info:hover > td,
+  .table-hover .table-info:hover > th {
+    background-color: #c4e3f3; }
+
+.table-warning,
+.table-warning > th,
+.table-warning > td {
+  background-color: #fcf8e3; }
+
+.table-hover .table-warning:hover {
+  background-color: #faf2cc; }
+  .table-hover .table-warning:hover > td,
+  .table-hover .table-warning:hover > th {
+    background-color: #faf2cc; }
+
+.table-danger,
+.table-danger > th,
+.table-danger > td {
+  background-color: #f2dede; }
+
+.table-hover .table-danger:hover {
+  background-color: #ebcccc; }
+  .table-hover .table-danger:hover > td,
+  .table-hover .table-danger:hover > th {
+    background-color: #ebcccc; }
+
+.thead-inverse th {
+  color: #fff;
+  background-color: #373a3c; }
+
+.thead-default th {
+  color: #55595c;
+  background-color: #eceeef; }
+
+.table-inverse {
+  color: #eceeef;
+  background-color: #373a3c; }
+  .table-inverse th,
+  .table-inverse td,
+  .table-inverse thead th {
+    border-color: #55595c; }
+  .table-inverse.table-bordered {
+    border: 0; }
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  min-height: .01%;
+  overflow-x: auto; }
+
+.table-reflow thead {
+  float: left; }
+
+.table-reflow tbody {
+  display: block;
+  white-space: nowrap; }
+
+.table-reflow th,
+.table-reflow td {
+  border-top: 1px solid #eceeef;
+  border-left: 1px solid #eceeef; }
+  .table-reflow th:last-child,
+  .table-reflow td:last-child {
+    border-right: 1px solid #eceeef; }
+
+.table-reflow thead:last-child tr:last-child th,
+.table-reflow thead:last-child tr:last-child td,
+.table-reflow tbody:last-child tr:last-child th,
+.table-reflow tbody:last-child tr:last-child td,
+.table-reflow tfoot:last-child tr:last-child th,
+.table-reflow tfoot:last-child tr:last-child td {
+  border-bottom: 1px solid #eceeef; }
+
+.table-reflow tr {
+  float: left; }
+  .table-reflow tr th,
+  .table-reflow tr td {
+    display: block !important;
+    border: 1px solid #eceeef; }
+
 .form-control {
   display: block;
   width: 100%;
@@ -3736,6 +3881,18 @@ a.text-danger:focus, a.text-danger:hover {
   .hidden-print {
     display: none !important; } }
 
+@-webkit-keyframes fade {
+  0%, 100% {
+    opacity: 0; }
+  25%, 50%, 75% {
+    opacity: 1; } }
+
+@keyframes fade {
+  0%, 100% {
+    opacity: 0; }
+  25%, 50%, 75% {
+    opacity: 1; } }
+
 .jumbo {
   background: url("../img/header.jpg") no-repeat center center;
   background-size: cover;
@@ -3745,6 +3902,18 @@ a.text-danger:focus, a.text-danger:hover {
     text-align: left;
     left: 0;
     text-shadow: none; }
+    .jumbo .carousel-caption h1 {
+      opacity: 0;
+      -webkit-animation: fade 4s linear;
+              animation: fade 4s linear;
+      -webkit-animation-delay: 1s;
+              animation-delay: 1s; }
+    .jumbo .carousel-caption p {
+      opacity: 0;
+      -webkit-animation: fade 3.8s linear;
+              animation: fade 3.8s linear;
+      -webkit-animation-delay: 1.2s;
+              animation-delay: 1.2s; }
   .jumbo .carousel-indicators {
     text-align: left;
     left: 30%; }
@@ -3856,9 +4025,6 @@ a.text-danger:focus, a.text-danger:hover {
   .benefits-section p:nth-child(even) {
     margin-bottom: 0; }
   .benefits-section .orange-bg {
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #F5F5F5), color-stop(50%, #FF893F));
-    background: -webkit-linear-gradient(left, #F5F5F5 50%, #FF893F 50%);
-    background: linear-gradient(90deg, #F5F5F5 50%, #FF893F 50%);
     padding-top: 3.75rem;
     padding-bottom: 3.75rem; }
   .benefits-section .featured-tiger {
@@ -3881,6 +4047,138 @@ a.text-danger:focus, a.text-danger:hover {
   padding-bottom: 3.75rem; }
   .tim h2 {
     margin-bottom: 2.8125rem; }
+
+.jumbo-about {
+  background: url("../img/Naka Ima_007a.jpg") no-repeat center center;
+  background-size: cover; }
+
+.about-padding {
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem; }
+  .about-padding .sectionTitle {
+    border-bottom: thin solid #80838D;
+    margin-bottom: 3.25rem; }
+
+/* Photos */
+.item {
+  height: 160px;
+  margin-bottom: 10px;
+  display: inline-block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+  width: 200px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover; }
+  .item:nth-child(4n-5) {
+    height: 150px; }
+  .item:nth-child(2n) {
+    height: 300px; }
+  .item:nth-child(3n) {
+    height: 210px; }
+  .item:nth-child(1) {
+    background-image: url("../img/gallery/NakaIma_1.jpeg"); }
+  .item:nth-child(2) {
+    background-image: url("../img/gallery/NakaIma_2.jpeg"); }
+  .item:nth-child(3) {
+    background-image: url("../img/gallery/NakaIma_3.jpeg"); }
+  .item:nth-child(4) {
+    background-image: url("../img/gallery/NakaIma_4.jpeg"); }
+  .item:nth-child(5) {
+    background-image: url("../img/gallery/NakaIma_5.jpeg"); }
+  .item:nth-child(6) {
+    background-image: url("../img/gallery/NakaIma_6.jpeg"); }
+  .item:nth-child(7) {
+    background-image: url("../img/gallery/NakaIma_7.jpeg"); }
+  .item:nth-child(8) {
+    background-image: url("../img/gallery/NakaIma_8.jpeg"); }
+  .item:nth-child(9) {
+    background-image: url("../img/gallery/NakaIma_9.jpeg"); }
+  .item:nth-child(10) {
+    background-image: url("../img/gallery/NakaIma_10.jpeg"); }
+  .item:nth-child(11) {
+    background-image: url("../img/gallery/NakaIma_11.jpeg"); }
+  .item:nth-child(12) {
+    background-image: url("../img/gallery/NakaIma_12.jpeg"); }
+  .item:nth-child(13) {
+    background-image: url("../img/gallery/NakaIma_13.jpeg"); }
+  .item:nth-child(14) {
+    background-image: url("../img/gallery/NakaIma_14.jpeg"); }
+  .item:nth-child(15) {
+    background-image: url("../img/gallery/NakaIma_15.jpeg"); }
+  .item:nth-child(16) {
+    background-image: url("../img/gallery/NakaIma_16.jpeg"); }
+  .item:nth-child(17) {
+    background-image: url("../img/gallery/NakaIma_17.jpeg"); }
+  .item:nth-child(18) {
+    background-image: url("../img/gallery/NakaIma_18.jpeg"); }
+  .item:nth-child(19) {
+    background-image: url("../img/gallery/NakaIma_19.jpeg"); }
+  .item:nth-child(20) {
+    background-image: url("../img/gallery/NakaIma_20.jpeg"); }
+  .item:nth-child(21) {
+    background-image: url("../img/gallery/NakaIma_21.jpeg"); }
+  .item:nth-child(22) {
+    background-image: url("../img/gallery/NakaIma_22.jpeg"); }
+  .item:nth-child(23) {
+    background-image: url("../img/gallery/NakaIma_23.jpeg"); }
+  .item:nth-child(24) {
+    background-image: url("../img/gallery/NakaIma_24.jpeg"); }
+  .item:nth-child(25) {
+    background-image: url("../img/gallery/NakaIma_25.jpeg"); }
+  .item:nth-child(26) {
+    background-image: url("../img/gallery/NakaIma_26.jpeg"); }
+  .item:nth-child(27) {
+    background-image: url("../img/gallery/NakaIma_27.jpeg"); }
+  .item:nth-child(28) {
+    background-image: url("../img/gallery/NakaIma_28.jpeg"); }
+  .item:nth-child(29) {
+    background-image: url("../img/gallery/NakaIma_29.jpeg"); }
+  .item:nth-child(30) {
+    background-image: url("../img/gallery/NakaIma_30.jpeg"); }
+  .item:nth-child(31) {
+    background-image: url("../img/gallery/NakaIma_31.jpeg"); }
+  .item:nth-child(32) {
+    background-image: url("../img/gallery/NakaIma_32.jpeg"); }
+  .item:nth-child(33) {
+    background-image: url("../img/gallery/NakaIma_33.jpeg"); }
+  .item:nth-child(34) {
+    background-image: url("../img/gallery/NakaIma_34.jpeg"); }
+  .item:nth-child(35) {
+    background-image: url("../img/gallery/NakaIma_35.jpeg"); }
+  .item:nth-child(36) {
+    background-image: url("../img/gallery/NakaIma_36.jpeg"); }
+  .item:nth-child(37) {
+    background-image: url("../img/gallery/NakaIma_37.jpeg"); }
+  .item:nth-child(38) {
+    background-image: url("../img/gallery/NakaIma_38.jpeg"); }
+  .item:nth-child(39) {
+    background-image: url("../img/gallery/NakaIma_39.jpeg"); }
+  .item:nth-child(40) {
+    background-image: url("../img/gallery/NakaIma_40.jpeg"); }
+  .item:nth-child(41) {
+    background-image: url("../img/gallery/NakaIma_41.jpeg"); }
+
+.item {
+  opacity: 0; }
+
+.item.is-visible {
+  -webkit-animation: Items 600ms ease-in forwards;
+          animation: Items 600ms ease-in forwards; }
+
+@-webkit-keyframes Items {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes Items {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 html, body {
   height: 100%; }
@@ -3931,13 +4229,29 @@ footer {
     footer p:nth-child(1) {
       margin-top: .5rem; }
 
-.jumbo-about {
-  background: url("../img/Naka Ima_007a.jpg") no-repeat center center;
-  background-size: cover; }
+/* Schedule */
+@-moz-document url-prefix() {
+  fieldset {
+    display: table-cell; } }
 
-.about-padding {
-  padding-top: 3.25rem;
-  padding-bottom: 3.25rem; }
-  .about-padding .sectionTitle {
-    border-bottom: thin solid #80838D;
-    margin-bottom: 3.25rem; }
+.nav-tabs .nav-link.active {
+  background-color: #3e454c;
+  color: #eceeef;
+  border-color: #3e454c; }
+  .nav-tabs .nav-link.active:focus {
+    background-color: #3e454c;
+    color: white; }
+  .nav-tabs .nav-link.active:hover {
+    background-color: #3e454c;
+    color: #eceeef;
+    border-color: transparent; }
+
+.table-inverse {
+  background-color: #3e454c; }
+
+.nav-tabs {
+  border-bottom: none; }
+
+/* Contact */
+.contact-headers {
+  margin-top: 0.625rem; }

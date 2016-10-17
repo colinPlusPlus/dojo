@@ -13,6 +13,8 @@ $menu-dark: rgba(62,69,76,0.98);
 
 @import 'bootstrap-custom';
 @import 'home';
+@import 'about';
+@import 'photos';
 
 html,body{
   height: 100%;
@@ -87,19 +89,39 @@ footer{
   }
 }
 
-.jumbo-about{
-  background: url("../img/Naka Ima_007a.jpg") no-repeat center center;
-  background-size: cover;
-  //height: 32.8125rem;
+/* Schedule */
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
 }
 
-.about-padding{
-  padding-top: 3.25rem;
-  padding-bottom: 3.25rem;
 
-  .sectionTitle{
-    border-bottom: thin solid $body-color;
-    margin-bottom: 3.25rem;
+.nav-tabs .nav-link.active{
+  background-color: $footer-color;
+  color: #eceeef;
+  border-color: $footer-color;
+
+  &:focus{
+    background-color: $footer-color;
+    color: white;
   }
 
+  &:hover{
+    background-color: $footer-color;
+    color: #eceeef;
+    border-color: transparent;
+  }
+}
+
+.table-inverse{
+  background-color: $footer-color;
+}
+
+.nav-tabs{
+  border-bottom: none;
+}
+
+/* Contact */
+
+.contact-headers{
+  margin-top: 0.625rem;
 }

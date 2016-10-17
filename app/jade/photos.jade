@@ -1,0 +1,116 @@
+include header.jade
+body
+  div.container-fluid
+    div.row
+      div.jumbo-about
+        div.container
+          div.row
+            div.col-md-2.light-nav
+              div.row
+                div.col-xs-12
+                  img(src="img/tiger_logo.png" class="img-fluid pull-xs-left" )
+                  em STREAK
+                  br
+                  em OF
+                  br
+                  em TIGERS
+              div.row
+                div.text-md-center
+                  p NAKA IMA
+                  p AIKIKAI AIKIDO
+            div.col-md-2.dark-nav
+              ul.nav
+                li.nav-item
+                  a(href="index.html" class="nav-link") HOME
+                li.nav-item
+                  a(href="about.html" class="nav-link") ABOUT
+                li.nav-item
+                  a(href="schedule.html" class="nav-link") SCHEDULE
+                li.nav-item
+                  a(href="photos.html" class="nav-link active") PHOTOS
+                // li.nav-item
+                //   a(href="#" class="nav-link") REGISTER
+                li.nav-item
+                  a(href="contact.html" class="nav-link") CONTACT
+  nav(class="navbar navbar-light navbar-fixed-top bg-faded hidden-xs-up animated" id="element")
+    div.container
+      button(class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation") &#9776;
+      div(class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2")
+        a(class="navbar-brand" href="#")
+          img(src="img/tiger_logo.png" class="img-fluid pull-xs-left")
+          span Streak Of Tigers
+        ul(class="nav navbar-nav pull-md-right")
+          li(class="nav-item")
+            a(class="nav-link" href="index.html") Home
+          li(class="nav-item")
+            a(class="nav-link" href="about.html") About
+          li(class="nav-item")
+            a(class="nav-link" href="schedule.html") Schedule
+          li(class="nav-item active")
+            a(class="nav-link" href="photos.html") Photos
+          // li(class="nav-item")
+          //   a(class="nav-link" href="#") Register
+          li(class="nav-item")
+            a(class="nav-link" href="contact.html") Contact
+  div.container
+    div.about-padding
+      div.row
+        div.col-md-2
+          h2.sectionTitle PHOTOS
+      // div.loader
+      //   img(src='img/loading.gif')
+      div.grid
+        - var i = 0;
+        while (i++ < 41)
+          a(href="img/gallery/NakaIma_" + i + ".jpeg" class="item" data-gallery)
+            img(src="img/gallery/NakaIma_" + i + ".jpeg" class="hidden-xl-down")
+
+
+
+
+  // The Bootstrap Image Gallery lightbox, should be a child element of the document body
+  div#blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
+    // The container for the modal slides
+    div.slides
+    // Controls for the borderless lightbox
+    h3.title
+    a.prev ‹
+    a.next ›
+    a.close ×
+    a.play-pause
+    ol.indicator
+    // The modal dialog, which will be used to wrap the lightbox content
+    div.modal.fade
+      div.modal-dialog
+        div.modal-content
+          div.modal-header
+            h4.modal-title
+          div.modal-body.next
+          div.modal-footer
+            button.btn.btn-default.pull-left.prev(type='button')
+              i.glyphicon.glyphicon-chevron-left Previous
+            button.btn.btn-primary.next(type='button') Next
+              i.glyphicon.glyphicon-chevron-right
+
+include footer.jade
+script(src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js")
+script(src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js")
+script(src="js/bootstrap-image-gallery.js")
+script.
+
+  $(function(){
+
+    // Masonry Grid
+    $('.grid').masonry({
+      itemSelector: '.item',
+      columnWidth: 200,
+      gutter: 10
+    });
+
+    // Fade In Effect
+    $('.item').each(function(i){
+      setTimeout(function(){
+        $('.item').eq(i).addClass('is-visible');
+      }, 200 * i);
+    });
+  });

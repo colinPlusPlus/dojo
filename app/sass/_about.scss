@@ -1,0 +1,16 @@
+.jumbo-about{
+  background: url("../img/Naka Ima_007a.jpg") no-repeat center center;
+  background-size: cover;
+  //height: 32.8125rem;
+}
+
+.about-padding{
+  padding-top: 3.25rem;
+  padding-bottom: 3.25rem;
+
+  .sectionTitle{
+    border-bottom: thin solid $body-color;
+    margin-bottom: 3.25rem;
+  }
+
+}

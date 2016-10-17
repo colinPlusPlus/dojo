@@ -1,0 +1,34 @@
+extends template
+block link
+  -var selected = 'schedule';
+block content
+  div.container
+    div.about-padding
+      div.row
+        div.col-md-2
+          h2.sectionTitle SCHEDULE
+      div.row
+        div.col-md-6
+          p All children students are welcome to watch and/or try one of our regular scheduled martial art classes anytime. No martial arts experience is required and all are welcome. Please bring a t-shirt and long-fitting pants.
+          p Classes run from Monday to Friday and Saturday mornings
+          div.row
+            div.col-md-8
+              div.table-responsive
+                table.table
+                  thead.table-inverse
+                    tr
+                      th Monday-Friday
+                      th Saturday
+                    tbody
+                      tr
+                        td 4-4:50pm
+                        td 9-9:50am
+                      tr
+                        td 5-5:50pm
+                        td 10-10:50am
+                      tr
+                        td 6-6:50pm
+        div.col-md-5.push-md-1
+          img(src="img/Naka Ima_031.jpg" class="img-fluid")
+block footer
+  include footer.jade

@@ -15,7 +15,7 @@ body
           div.row
             div.text-md-center
               p NAKA IMA
-              p AIKIKAI AIKIDO
+              p AIKIDO
         div.col-md-2.dark-nav
           ul.nav
             li.nav-item
@@ -23,15 +23,15 @@ body
             li.nav-item
               a(href="about.html" class="nav-link") ABOUT
             li.nav-item
-              a(href="#" class="nav-link") SCHEDULE
+              a(href="schedule.html" class="nav-link") SCHEDULE
             li.nav-item
-              a(href="#" class="nav-link") PHOTO
+              a(href="photos.html" class="nav-link") PHOTOS
+            // li.nav-item
+            //   a(href="#" class="nav-link") REGISTER
             li.nav-item
-              a(href="#" class="nav-link") REGISTER
-            li.nav-item
-              a(href="#" class="nav-link") CONTACT
+              a(href="contact.html" class="nav-link") CONTACT
         div.col-md-9
-          div(id="home-carousel" class="carousel slide" data-ride="carousel")
+          div(id="home-carousel" class="carousel" data-ride="carousel")
             ol.carousel-indicators
               li(data-target="#home-carousel" data-slide-to="0" class="active")
               li(data-target="#home-carousel" data-slide-to="1")
@@ -39,18 +39,23 @@ body
             div(class="carousel-inner" role="listbox")
               div.carousel-item.active
                 div.viewport-height
-                div.carousel-caption
-                  h1.text-uppercase.animated.fadeInDownBig Effective Self Defense
-                  p Number 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim diam, aliquam non placerat vitae, dictum sit amet massa.
+                div.carousel-caption.animated.fadeInDownBig
+                  h1.text-uppercase.animated.fadeInDownBig bully proof
+                  p.animated.fadeInUp The Tigers program has proven track record of providing kids with tips and strategies to deal with bullies.
               div.carousel-item
                 div.viewport-height
                 div.carousel-caption
-                  h1.text-uppercase.animated.fadeInDownBig Mind & Body
-                  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim diam, aliquam non placerat vitae, dictum sit amet massa.
+                  h1.text-uppercase Get moving!
+                  p Each 50- minute class is  flurry og jumping, running, ducking, rolling, spinning and non-stop martial arts action.
+              div.carousel-item
+                div.viewport-height
+                div.carousel-caption
+                  h1.text-uppercase Be a Tiger
+                  p If you want to be a Tiger, you need to train with Tigers
   div.cta
     p Not sure if Aikido is right for your child?
     p Get two trial classes, no cost, no sign ups, no hassle. Just fun.
-    a(href="#" class="btn btn-outline-primary") LET'S TRY IT!
+    a(href="schedule.html" class="btn btn-outline-primary") LET'S TRY IT!
   nav(class="navbar navbar-light navbar-fixed-top bg-faded hidden-xs-up animated" id="element")
     div.container
       button(class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation") &#9776;
@@ -60,23 +65,23 @@ body
           span Streak Of Tigers
         ul(class="nav navbar-nav pull-md-right")
           li(class="nav-item active")
-            a(class="nav-link" href="#") Home
+            a(class="nav-link" href="index.html") Home
           li(class="nav-item")
             a(class="nav-link" href="about.html") About
           li(class="nav-item")
-            a(class="nav-link" href="#") Schedule
+            a(class="nav-link" href="schedule.html") Schedule
           li(class="nav-item")
-            a(class="nav-link" href="#") Photo
+            a(class="nav-link" href="photos.html") Photos
+          // li(class="nav-item")
+          //   a(class="nav-link" href="#") Register
           li(class="nav-item")
-            a(class="nav-link" href="#") Register
-          li(class="nav-item")
-            a(class="nav-link" href="#") Contact
+            a(class="nav-link" href="contact.html") Contact
   div.about-section
     div.container-fluid
       div.row
         div.col-md-6
           div.row
-            img(src="img/Naka Ima_006.jpg" class="about-pic")
+            img(src="img/Naka Ima_006a.jpg" class="about-pic")
         div.container
           div.push-md-1.col-md-5.about-statement
             h2 THE HISTORY OF AIKIDO
@@ -86,7 +91,7 @@ body
   div.container
     div.meme-quote
       em The supreme challenge of the warrior is to turn an enemy's wrath into harmless laughter.
-      p -Ueshiba Morihei
+      p -Ueshiba Morihei &nbsp;
         em founder of Aikido
   hr.section-break
   div.benefits-section
@@ -100,13 +105,15 @@ body
               p improve their concentration and self-respect
               p Aikido also builds awarness, self-confidence, teamwork, and
               p a sense of social and community responsibility.
-              a(class="btn btn-outline-primary") Learn More
-            div.col-md-5.push-md-1.featured-tiger
-              h3.text-uppercase OUR FEATURED TIGER
-              img(src="img/Naka Ima_010.jpg" class="img-fluid pull-xs-left")
-              p Donec nec bibendum neque. Vivamus imperdiet ac elit non commodo. Sed in pharetra justo. Aenean eros libero, maximus eget odio quis, pharetra elementum ex. Quisque nibh dui, condimentum tincidunt sagittis ac, hendrerit iaculis orci. Vestibulum gravida dapibus felis, eget
-              div.text-xs-center
-                a(href="#" class="btn btn-outline-secondary") Read More
+              a(class="btn btn-outline-primary" href="benefits.html") Learn More
+            div.col-md-6.featured-tiger
+              div(class="embed-responsive embed-responsive-16by9")
+                iframe(class="embed-responsive-item" width="100%" height="170" src="//www.youtube.com/embed/CHtVCl8poAI?rel=0" allowfullscreen)
+              //h3.text-uppercase OUR FEATURED TIGER
+              //img(src="img/Naka Ima_010.jpg" class="img-fluid pull-xs-left")
+              //p Donec nec bibendum neque. Vivamus imperdiet ac elit non commodo. Sed in pharetra justo. Aenean eros libero, maximus eget odio quis, pharetra elementum ex. Quisque nibh dui, condimentum tincidunt sagittis ac, hendrerit iaculis orci. Vestibulum gravida dapibus felis, eget
+              //div.text-xs-center
+              //  a(href="#" class="btn btn-outline-secondary") Read More
   hr.section-break
   div.tim
     div.container
@@ -115,27 +122,30 @@ body
           h2.text-uppercase Tigers in motion
       div.row
         div.col-md-3
-          a(href="http://placehold.it/262x224" data-gallery)
-            img(src="http://placehold.it/262x224" class="img-fluid")
+          a(href="img/Naka Ima_001.jpg" data-gallery)
+            img(src="img/Naka Ima_001.jpg" class="img-fluid")
         div.col-md-3
-          a(href="http://placehold.it/262x224" data-gallery)
-            img(src="http://placehold.it/262x224" class="img-fluid")
-        div.col-md-6
-          a(href="http://placehold.it/262x224" data-gallery)
-            img(src="http://placehold.it/549x224" class="img-fluid")
+          a(href="img/Naka Ima_002.jpg" data-gallery)
+            img(src="img/Naka Ima_002.jpg" class="img-fluid")
+        div.col-md-3
+         a(href="img/gallery/NakaIma_24.jpeg")
+          img(src="img/gallery/NakaIma_24.jpeg" class="img-fluid")
+        div.col-md-3
+         a(href="img/gallery/NakaIma_14.jpeg")
+          img(src="img/gallery/NakaIma_14.jpeg" class="img-fluid")
       div(class="row" style="margin-top: 30px;")
         div.col-md-3
-          a(href="http://placehold.it/262x224" data-gallery)
-            img(src="http://placehold.it/262x224" class="img-fluid")
+          a(href="img/Naka Ima_003.jpg" data-gallery)
+            img(src="img/Naka Ima_003.jpg" class="img-fluid")
         div.col-md-3
-          a(href="http://placehold.it/262x224" data-gallery)
-            img(src="http://placehold.it/262x224" class="img-fluid")
+          a(href="img/Naka Ima_004.jpg" data-gallery)
+            img(src="img/Naka Ima_004.jpg" class="img-fluid")
         div.col-md-3
-          a(href="http://placehold.it/262x224" data-gallery)
-            img(src="http://placehold.it/262x224" class="img-fluid")
+          a(href="img/Naka Ima_005.jpg" data-gallery)
+            img(src="img/Naka Ima_005.jpg" class="img-fluid")
         div.col-md-3
-          a(href="http://placehold.it/262x224" data-gallery)
-            img(src="http://placehold.it/262x224" class="img-fluid")
+          a(href="img/Naka Ima_006.jpg" data-gallery)
+            img(src="img/Naka Ima_006.jpg" class="img-fluid")
   // The Bootstrap Image Gallery lightbox, should be a child element of the document body
   div#blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
     // The container for the modal slides
@@ -159,28 +169,35 @@ body
               i.glyphicon.glyphicon-chevron-left Previous
             button.btn.btn-primary.next(type='button') Next
               i.glyphicon.glyphicon-chevron-right
-  include footer.jade
-  script.
-    $(function(){
-      var a = $(window).height()/2 - $('.carousel-caption').height()/2;
-      a = a + 100;
-      a = a + "px";
-      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+  block footer
+    include footer.jade
+    script(src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js")
+    script(src="js/bootstrap-image-gallery.js")
+    script.
+      $(function(){
+        var a = $(window).height()/2 - $('.carousel-caption').height()/2;
+        a = a + 100;
+        a = a + "px";
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
-      $('.viewport-height').css('height', a);
+        $('.viewport-height').css('height', a);
 
-      $(window).scroll(function() {
-        var topHeight = $(window).height();
-        var scroll = $(window).scrollTop();
+        $(window).scroll(function() {
+          var topHeight = $(window).height();
+          var scroll = $(window).scrollTop();
 
-        if (scroll >= topHeight) {
-          $(".navbar").removeClass("hidden-xs-up");
-          $(".navbar").removeClass("fadeOutUp");
-          $(".navbar").addClass("fadeInDown")
-        }
-        if (scroll < topHeight) {
-          $(".navbar").addClass("fadeOutUp");
-          $(".navbar").removeClass("fadeInDown");
-        }
-      });
-    })
+          if (scroll >= topHeight) {
+            $(".navbar").removeClass("hidden-xs-up");
+            $(".navbar").removeClass("fadeOutUp");
+            $(".navbar").addClass("fadeInDown")
+          }
+          if (scroll < topHeight) {
+            $(".navbar").addClass("fadeOutUp");
+            $(".navbar").removeClass("fadeInDown");
+          }
+        });
+
+        $('.carousel').carousel({
+          pause: null,
+        });
+      })

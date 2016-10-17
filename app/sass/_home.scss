@@ -1,3 +1,8 @@
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  25%,50%,75% { opacity: 1 }
+}
+
 .jumbo{
   background: url('../img/header.jpg') no-repeat center center;
   background-size: cover;
@@ -8,6 +13,18 @@
     text-align: left;
     left: 0;
     text-shadow: none;
+
+    h1{
+      opacity: 0;
+      animation: fade 4s linear;
+      animation-delay: 1s;
+    }
+
+    p{
+      opacity: 0;
+      animation: fade 3.8s linear;
+      animation-delay: 1.2s;
+    }
   }
 
   .carousel-indicators{
@@ -173,7 +190,7 @@
     }
   }
   .orange-bg{
-    background: linear-gradient(90deg, $body-bg 50%, $brand-primary 50%);
+    //background: linear-gradient(90deg, $body-bg 50%, $brand-primary 50%);
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
   }
