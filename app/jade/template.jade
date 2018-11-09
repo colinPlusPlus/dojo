@@ -102,17 +102,12 @@ body
           img(src="img/tiger_logo.png" class="img-fluid pull-xs-left")
           span Streak Of Tigers
         ul(class="nav navbar-nav pull-md-right")
-          li(class="nav-item")
-            a(class="nav-link" href="index.html") Home
-          li(class="nav-item")
-            a(class="nav-link" href="about.html") About
-          li(class="nav-item active")
-            a(class="nav-link" href="schedule.html") Schedule
-          li(class="nav-item")
-            a(class="nav-link" href="photos.html") Photos
-          // li(class="nav-item")
-          //   a(class="nav-link" href="#") Register
-          li(class="nav-item")
-            a(class="nav-link" href="contact.html") Contact
+          each val, key in menu
+            if selected === key
+              li.nav-item.active
+                a(href=val class="nav-link text-uppercase")= key
+            else
+              li.nav-item
+                a(href=val class="nav-link text-uppercase")= key
   block content
   block footer

@@ -147,6 +147,10 @@
   margin-bottom: 0rem;
 }
 
+.bg-dark{
+  background-color: lighten($footer-color, 10%);
+}
+
 .meme-quote{
   @extend .row;
   text-align: center;

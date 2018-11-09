@@ -3997,6 +3997,9 @@ a.text-danger:focus, a.text-danger:hover {
   margin-top: 0rem;
   margin-bottom: 0rem; }
 
+.bg-dark {
+  background-color: #555f68; }
+
 .meme-quote {
   text-align: center;
   padding-top: 3.75rem;
