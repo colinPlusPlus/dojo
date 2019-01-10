@@ -48,11 +48,9 @@ gulp.task('move', function(){
 });
 
 gulp.task('watch', function(){
-  gulp.watch('./app/jade/*.jade', ['jade']).on('change', browserSync.reload);
-  gulp.watch(['./app/sass/**/_*.scss', './app/sass/**/*.scss'], ['sass']);
+  gulp.watch('./app/jade/*.jade', gulp.series('jade')).on('change', browserSync.reload);
+  gulp.watch(['./app/sass/**/_*.scss', './app/sass/**/*.scss'], gulp.series('sass'));
   gulp.watch("./dist/*.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['sass','jade','browser-sync','move','watch'], function() {
-
-});
+gulp.task('default', gulp.series(['sass','jade','browser-sync','move','watch']));

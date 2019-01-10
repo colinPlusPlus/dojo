@@ -3,7 +3,7 @@ body
   div.jumbo
     div.container
       div.row
-        div.col-md-2.light-nav
+        div.col-md-2.light-nav.hidden-md-down
           div.row
             div.col-xs-12
               img(src="img/tiger_logo.png" class="img-fluid pull-xs-left" )
@@ -16,7 +16,7 @@ body
             div.text-md-center
               p NAKA IMA
               p AIKIDO
-        div.col-md-2.dark-nav
+        div.col-md-2.dark-nav.hidden-md-down
           ul.nav
             li.nav-item
               a(href="index.html" class="nav-link active") HOME
@@ -56,11 +56,11 @@ body
     p Not sure if Aikido is right for your child?
     p Get two trial classes, no cost, no sign ups, no hassle. Just fun.
     a(href="schedule.html" class="btn btn-outline-primary") LET'S TRY IT!
-  nav(class="navbar navbar-light navbar-fixed-top bg-faded hidden-xs-up animated" id="element")
+  nav(class="navbar navbar-expand navbar-light navbar-fixed-top bg-faded hidden-xs-up animated" id="element")
     div.container
-      button(class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation") &#9776;
-      div(class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2")
-        a(class="navbar-brand" href="#")
+      button(class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation") &#9776;
+      div(class="collapse navbar-toggleable-md" id="exCollapsingNavbar2")
+        a(class="navbar-brand" href="index.html")
           img(src="img/tiger_logo.png" class="img-fluid pull-xs-left")
           span Streak Of Tigers
         ul(class="nav navbar-nav pull-md-right")
@@ -85,8 +85,10 @@ body
         div.container
           div.push-md-1.col-md-5.about-statement
             h2 THE HISTORY OF AIKIDO
-            p Aikido is an exciting and dynamic martial arts for kids of all ages. It is a non-violent and non-aggressive martial art and a great way for children to have fun and stay healthy. We have Aikido martial art classes for kids on weekday evenings and Saturday mornings (click here for class schedule). Boys and girls ages 5 through 12 are welcome to join the children's Aikido classes.
-            p The kids martial arts classes typically start with stretching and warm-up exercises. Children learn how to roll and perform Aikido techniques, including self-defense moves. Games are also played to help children develop their balance and coordination. Belt tests are conducted on a regular basis.
+            p Aikido is an exciting and dynamic martial arts for kids of all ages. It is a non-violent and non-aggressive martial art and a great way for children to have fun and stay healthy. The Streak of Tigers program is a unique blend of Aikido, Judo and Brazilian Jujitsu. Classes are held 6 days a week&nbsp
+              a(href="schedule.html") (click here for class schedule).&nbsp
+            | Boys and girls ages 4 and up are welcome to join the Tigers.
+            | The kids martial arts classes typically start with stretching and warm-up exercises. Children learn how to roll and perform Aikido techniques, including self-defense moves. Games are also played to help children develop their balance and coordination. Belt tests are conducted on a regular basis.
   hr.section-break
   div.container-fluid.bg-dark
     div.container
@@ -102,10 +104,9 @@ body
           div.row
             div.col-md-6
               h2.text-uppercase benefits of Aikido
-              p With Aikido martial arts, children learn self-discipline and
-              p improve their concentration and self-respect
-              p Aikido also builds awarness, self-confidence, teamwork, and
-              p a sense of social and community responsibility.
+              p Our aim is to instill the values of RESPECT, COMPASSION and GRATITUDE that are the foundation of Japanese martial arts, while promoting physical literacy and healthy lifestyle.
+                | Each class includes a variety of activities that will increase strength, co-ordination, balance, and flexibility. At the same time improve focus, self-discipline, and mindfulness.
+
               a(class="btn btn-outline-primary" href="benefits.html") Learn More
             div.col-md-6.featured-tiger
               div(class="embed-responsive embed-responsive-16by9")
@@ -174,31 +175,4 @@ body
     include footer.jade
     script(src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js")
     script(src="js/bootstrap-image-gallery.js")
-    script.
-      $(function(){
-        var a = $(window).height()/2 - $('.carousel-caption').height()/2;
-        a = a + 100;
-        a = a + "px";
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-
-        $('.viewport-height').css('height', a);
-
-        $(window).scroll(function() {
-          var topHeight = $(window).height();
-          var scroll = $(window).scrollTop();
-
-          if (scroll >= topHeight) {
-            $(".navbar").removeClass("hidden-xs-up");
-            $(".navbar").removeClass("fadeOutUp");
-            $(".navbar").addClass("fadeInDown")
-          }
-          if (scroll < topHeight) {
-            $(".navbar").addClass("fadeOutUp");
-            $(".navbar").removeClass("fadeInDown");
-          }
-        });
-
-        $('.carousel').carousel({
-          pause: null,
-        });
-      })
+    script(src="js/app.js")
