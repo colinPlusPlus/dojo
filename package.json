@@ -10,7 +10,7 @@
   "author": "Colin Williams",
   "license": "MIT",
   "devDependencies": {
-    "bootstrap": "^4.2.1",
+    "bootstrap": "4.0.0-alpha.3",
     "browser-sync": "^2.26.3",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.0",
