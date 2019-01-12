@@ -4,36 +4,35 @@ $(function(){
   var showing = false;
 
   //Initiate navbar animation on large screen
-  if($(window).width() >= 992){
-    $(window).scroll(function() {
-      var topHeight = $('.jumbo-about').height();
-      var scroll = $(window).scrollTop();
+  $(window).scroll(function() {
+    var topHeight = $('.jumbo-about').height();
+    var scroll = $(window).scrollTop();
 
-      if (scroll >= topHeight) {
-        $(".navbar").removeClass("hidden-lg-up");
-        $(".navbar").removeClass("fadeOutUp");
-        $(".navbar").addClass("fadeInDown");
-      }
-      if (scroll < topHeight) {
-        $(".navbar").addClass("fadeOutUp");
-        $(".navbar").removeClass("fadeInDown");
-      }
-    });
-  }
+    if (scroll >= topHeight) {
+      $(".navbar").removeClass("hidden-lg-up");
+      $(".navbar").removeClass("fadeOutUp");
+      $(".navbar").addClass("fadeInDown");
+    }
+    if (scroll < topHeight) {
+      $(".navbar").addClass("fadeOutUp");
+      $(".navbar").removeClass("fadeInDown");
+    }
+  });
 
   //Nav Dropdown button animation
   $("#nav-button").click(function(){
     if (showing === false){
-      $("#nav-button").removeClass("hidden-md-down");
-      $(".navbar").removeClass("fadeOutUp");
-      $(".navbar").addClass("fadeInDown");
+      $("#exCollapsingNavbar2").removeClass("hidden-md-down");
+      $("#exCollapsingNavbar2").removeClass("fadeOutUp");
+      $("#exCollapsingNavbar2").addClass("fadeInDown");
 
       showing = true;
     }
 
     else{
-      $(".navbar").addClass("fadeOutUp");
-      $(".navbar").removeClass("fadeInDown");
+      $("#exCollapsingNavbar2").addClass("fadeOutUp");
+      $("#exCollapsingNavbar2").removeClass("fadeInDown");
+      $("#exCollapsingNavbar2").addClass("hidden-md-down");
       showing = false;
     }
   });

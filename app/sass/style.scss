@@ -32,7 +32,9 @@ html,body{
 
 .navbar-brand{
   span{
-    display: inline-block;
+    @include media-breakpoint-up(lg){
+      display: inline-block;
+    }
     margin-top: 20.5px;
     margin-left: 10px;
     text-transform: uppercase;
@@ -47,6 +49,18 @@ html,body{
   color: $brand-primary;
 }
 
+.navbar-nav .nav-item{
+  @include media-breakpoint-down(md){
+    float: none;
+  }
+}
+
+.navbar-nav .nav-item + .nav-item{
+  @include media-breakpoint-down(md){
+    margin-left: 0px;
+  }
+}
+
 .navbar-light .navbar-nav .nav-link{
   color: $body-color;
   text-transform: uppercase;
@@ -56,8 +70,16 @@ html,body{
   }
 }
 
-ul.nav.navbar-nav.pull-md-right{
-  margin-top: 20.5px;
+ul.nav.navbar-nav.pull-lg-right{
+  @include media-breakpoint-up(lg){
+    margin-top: 20.5px;
+  }
+}
+
+.navbar-brand{
+  @include media-breakpoint-down(md){
+    width: 100%;
+  }
 }
 
 /* Footer */
@@ -72,6 +94,12 @@ footer{
   i{
    // font-size: 6.25rem;
     color: $footer-icon-color;
+  }
+
+  .footer-icon-margin{
+    @include media-breakpoint-down(md){
+      margin-top: 20px;
+    }
   }
 
   .lead{

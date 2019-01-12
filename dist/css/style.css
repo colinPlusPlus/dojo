@@ -54,7 +54,8 @@ a:hover {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted; }
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; }
 
 b,
 strong {
@@ -258,7 +259,7 @@ html {
 html {
   font-size: 16px;
   -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 body {
   font-family: "Open Sans";
@@ -547,6 +548,7 @@ dl.row > dd + dt, dl.meme-quote > dd + dt {
   -webkit-border-radius: 0.25rem;
           border-radius: 0.25rem;
   -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   display: inline-block;
   max-width: 100%;
@@ -1403,6 +1405,9 @@ dl.row > dd + dt, dl.meme-quote > dd + dt {
   .form-control:-ms-input-placeholder {
     color: #999;
     opacity: 1; }
+  .form-control::-ms-input-placeholder {
+    color: #999;
+    opacity: 1; }
   .form-control::placeholder {
     color: #999;
     opacity: 1; }
@@ -1533,7 +1538,8 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   padding-right: 2.25rem;
   background-repeat: no-repeat;
   background-position: center right 0.625rem;
-  background-size: 1.25rem 1.25rem; }
+  -webkit-background-size: 1.25rem 1.25rem;
+          background-size: 1.25rem 1.25rem; }
 
 .has-success .form-control-feedback,
 .has-success .form-control-label,
@@ -2258,7 +2264,8 @@ input[type="button"].btn-block {
   background-color: #ddd;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 50% 50%; }
+  -webkit-background-size: 50% 50%;
+          background-size: 50% 50%; }
 
 .custom-checkbox .custom-control-indicator {
   -webkit-border-radius: 0.25rem;
@@ -2296,7 +2303,8 @@ input[type="button"].btn-block {
   vertical-align: middle;
   background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
   background-image: none \9;
-  background-size: 8px 10px;
+  -webkit-background-size: 8px 10px;
+          background-size: 8px 10px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 0.25rem;
           border-radius: 0.25rem;
@@ -3233,6 +3241,7 @@ button.list-group-item-danger {
     position: relative;
     display: none;
     -webkit-transition: .6s ease-in-out left;
+    -o-transition: .6s ease-in-out left;
     transition: .6s ease-in-out left; }
     .carousel-inner > .carousel-item > img,
     .carousel-inner > .carousel-item > a > img {
@@ -3241,6 +3250,7 @@ button.list-group-item-danger {
       .carousel-inner > .carousel-item {
         -webkit-transition: -webkit-transform .6s ease-in-out;
         transition: -webkit-transform .6s ease-in-out;
+        -o-transition: transform .6s ease-in-out;
         transition: transform .6s ease-in-out;
         transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
         -webkit-backface-visibility: hidden;
@@ -3296,6 +3306,7 @@ button.list-group-item-danger {
   .carousel-control.left {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1); }
@@ -3304,6 +3315,7 @@ button.list-group-item-danger {
     left: auto;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
     background-repeat: repeat-x;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1); }
@@ -3351,7 +3363,7 @@ button.list-group-item-danger {
     margin: 1px;
     text-indent: -999px;
     cursor: pointer;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
     -webkit-border-radius: 10px;
             border-radius: 10px; }
@@ -3713,7 +3725,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .text-truncate {
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   white-space: nowrap; }
 
 .text-xs-left {
@@ -3895,7 +3908,8 @@ a.text-danger:focus, a.text-danger:hover {
 
 .jumbo {
   background: url("../img/header.jpg") no-repeat center center;
-  background-size: cover;
+  -webkit-background-size: cover;
+          background-size: cover;
   width: 100%;
   min-height: 100%; }
   .jumbo .carousel-caption {
@@ -4053,7 +4067,8 @@ a.text-danger:focus, a.text-danger:hover {
 
 .jumbo-about {
   background: url("../img/Naka Ima_007a.jpg") no-repeat center center;
-  background-size: cover; }
+  -webkit-background-size: cover;
+          background-size: cover; }
 
 .about-padding {
   padding-top: 3.25rem;
@@ -4074,7 +4089,8 @@ a.text-danger:focus, a.text-danger:hover {
   width: 200px;
   overflow: hidden;
   background-position: center;
-  background-size: cover; }
+  -webkit-background-size: cover;
+          background-size: cover; }
   .item:nth-child(4n-5) {
     height: 150px; }
   .item:nth-child(2n) {
@@ -4194,16 +4210,26 @@ html, body {
   padding: 0; }
 
 .navbar-brand span {
-  display: inline-block;
   margin-top: 20.5px;
   margin-left: 10px;
   text-transform: uppercase;
   color: #80838D; }
+  @media (min-width: 992px) {
+    .navbar-brand span {
+      display: inline-block; } }
   .navbar-brand span:hover {
     color: #FF893F; }
 
 .navbar-light .navbar-nav .active > .nav-link {
   color: #FF893F; }
+
+@media (max-width: 991px) {
+  .navbar-nav .nav-item {
+    float: none; } }
+
+@media (max-width: 991px) {
+  .navbar-nav .nav-item + .nav-item {
+    margin-left: 0px; } }
 
 .navbar-light .navbar-nav .nav-link {
   color: #80838D;
@@ -4211,8 +4237,13 @@ html, body {
   .navbar-light .navbar-nav .nav-link:hover {
     color: rgba(255, 137, 63, 0.9); }
 
-ul.nav.navbar-nav.pull-md-right {
-  margin-top: 20.5px; }
+@media (min-width: 992px) {
+  ul.nav.navbar-nav.pull-lg-right {
+    margin-top: 20.5px; } }
+
+@media (max-width: 991px) {
+  .navbar-brand {
+    width: 100%; } }
 
 /* Footer */
 footer {
@@ -4223,6 +4254,9 @@ footer {
   text-align: center; }
   footer i {
     color: #e06314; }
+  @media (max-width: 991px) {
+    footer .footer-icon-margin {
+      margin-top: 20px; } }
   footer .lead {
     font-weight: 400; }
   footer p {

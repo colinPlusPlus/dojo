@@ -69,10 +69,10 @@ body
                         h1.text-uppercase Be a Tiger
                         p If you want to be a Tiger, you need to train with Tigers
       else
-        div.jumbo-about
+        div.jumbo-about.hidden-md-down
           div.container
             div.row
-              div.col-md-2.hidden-sm-down.light-nav
+              div.col-md-2.light-nav
                 div.row
                   div.col-xs-12
                     img(src="img/tiger_logo.png" class="img-fluid pull-xs-left" )
@@ -94,20 +94,21 @@ body
                     else
                       li.nav-item
                         a(href=val class="nav-link text-uppercase")= key
-  nav(class="navbar navbar-light navbar-fixed-top bg-faded hidden-lg-up animated" id="element")
-    div.container
-      button(class="navbar-toggler hidden-lg-up" type="button") &#9776;
-      div(class="collapse hidden-md-down" id="nav-button")
-        a(class="navbar-brand" href="#")
-          img(src="img/tiger_logo.png" class="img-fluid pull-xs-left")
-          span Streak Of Tigers
-        ul(class="nav navbar-nav pull-md-right")
-          each val, key in menu
-            if selected === key
-              li.nav-item.active
-                a(href=val class="nav-link text-uppercase")= key
-            else
-              li.nav-item
-                a(href=val class="nav-link text-uppercase")= key
+    nav(class="navbar navbar-light navbar-fixed-top bg-faded hidden-lg-up animated" id="element")
+      div.container
+        button(class="navbar-toggler hidden-lg-up" id="nav-button" type="button")
+          i(class="fa fa-bars fa-lg" aria-hidden="true")
+        div(class="navbar-toggleable hidden-md-down animated" id="exCollapsingNavbar2")
+          a(class="navbar-brand" href="index.html")
+            img(src="img/tiger_logo.png" class="img-fluid pull-xs-left")
+            span Streak Of Tigers
+          ul(class="nav navbar-nav pull-xs-left pull-lg-right")
+            each val, key in menu
+              if selected === key
+                li.nav-item.active
+                  a(href=val class="nav-link text-uppercase")= key
+              else
+                li.nav-item
+                  a(href=val class="nav-link text-uppercase")= key
   block content
   block footer

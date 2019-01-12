@@ -1,0 +1,54 @@
+extends template
+block link
+  -var selected = 'photos';
+block content
+  div.container
+    div.about-padding
+      div.row
+        div.col-md-2
+          h2.sectionTitle PHOTOS
+      div.grid
+        - var i = 0;
+        while (i++ < 41)
+          a(href="img/gallery/NakaIma_" + i + ".jpeg" class="item" data-gallery)
+            img(src="img/gallery/NakaIma_" + i + ".jpeg" class="hidden-xl-down")
+  div#blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
+    div.slides
+    h3.title
+    a.prev ‹
+    a.next ›
+    a.close ×
+    a.play-pause
+    ol.indicator
+    div.modal.fade
+      div.modal-dialog
+        div.modal-content
+          div.modal-header
+            h4.modal-title
+          div.modal-body.next
+          div.modal-footer
+            button.btn.btn-default.pull-left.prev(type='button')
+              i.glyphicon.glyphicon-chevron-left Previous
+            button.btn.btn-primary.next(type='button') Next
+              i.glyphicon.glyphicon-chevron-right
+
+include footer.jade
+script(src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js")
+script(src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js")
+script(src="js/bootstrap-image-gallery.js")
+script.
+
+  $(function(){
+
+    $('.grid').masonry({
+      itemSelector: '.item',
+      columnWidth: 200,
+      gutter: 10
+    });
+
+    $('.item').each(function(i){
+      setTimeout(function(){
+        $('.item').eq(i).addClass('is-visible');
+      }, 200 * i);
+    });
+  });
